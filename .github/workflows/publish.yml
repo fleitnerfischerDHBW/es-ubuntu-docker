@@ -14,5 +14,4 @@ password: ${{ secrets.GITHUB_TOKEN }}
 - name: Build the es-ubuntu-docker Docker image
 run: |
        docker build . --tag ghcr.io/fleitnerfischerDHBW/es-ubuntu-docker:latest
-       docker run ghcr.io/fleitnerfischerDHBW/es-ubuntu-docker:latest
        docker push ghcr.io/fleitnerfischerDHBW/es-ubuntu-docker:latest
