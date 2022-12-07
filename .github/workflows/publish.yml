@@ -21,8 +21,10 @@ jobs:
            username: ${{ secrets.DOCKERHUB_USER }}
            password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Get Code 
         uses: actions/checkout@v2
+      -
+        name: Build and push
         run: docker build . --file Dockerfile --tag leitnerfischerdhbw/es-ubuntu-x86:latest
       -
         name: Docker Push
