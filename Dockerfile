@@ -13,5 +13,5 @@ ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update
 
 #install build essentials
-RUN apt-get -y install build-essential libssl-dev cmake cppcheck git
+RUN apt-get -y install build-essential libssl-dev cmake cppcheck git wget curl
 
