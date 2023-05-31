@@ -14,6 +14,10 @@ RUN apt-get update
 
 #install build essentials
 RUN apt-get -y install snapd build-essential libssl-dev cppcheck git wget curl gdb
-RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4.tar.gz
-RUN tar -zxvf cmake-3.26.4.tar.gz
-RUN cd cmake-3.26.4 && ./bootstrap && make && make install
+#RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4.tar.gz
+#RUN tar -zxvf cmake-3.26.4.tar.gz
+#RUN cd cmake-3.26.4 && ./bootstrap && make && make install
+RUN wget https://github.com/Kitware/CMake/releases/download/v3.26.4/cmake-3.26.4-linux-x86_64.tar.gz
+RUN tar zxvf cmake-3.26.4-linux-x86_64.tar.gz
+RUN mv cmake-3.26.4-linux-x86_64 /opt/cmake-3.26.4-linux-x86_64
+RUN ln -sf  /opt/cmake-3.26.4-linux-x86_64/bin/* /usr/bin/
